@@ -14,7 +14,7 @@ public class CriaContaComSaldo {
 		EntityManager em = emf.createEntityManager();
 		
 		Conta conta = new Conta();
-		conta.setTitular("Marcia");
+		conta.setTitular("Maria");
 		conta.setNumero(1056726);
 		conta.setAgencia(4364);
 		conta.setSaldo(100.0);
@@ -27,7 +27,7 @@ public class CriaContaComSaldo {
 		EntityManager em2 = emf.createEntityManager();
 		
 		System.out.println("Id conta da marcia = " + conta.getId());
-		conta.setSaldo(500.0);
+		conta.setSaldo(535.0);
 		
 		em2.getTransaction().begin();
 		em2.merge(conta);

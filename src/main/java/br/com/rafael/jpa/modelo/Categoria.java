@@ -12,16 +12,33 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
+
+	public Categoria(String nome) {
+		super();
+		this.nome = nome;
+	}
 	
+    @Override
+    public String toString() {
+        return nome + " - " + id;
+    }
+	
+	@Deprecated
+	public Categoria() {
+	}
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
